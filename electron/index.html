@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .container {
+        background-color: aqua;
+      }
+      #info {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      #jumbo {
+        background-color: black;
+        color: whitesmoke;
+      }
+      span {
+        display: inline-flex;
+      }
+      #info-section {
+        display:grid;
+        grid-template-columns: auto;
+        padding: 15px;
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./index.js"></script>
+  </head>
+
+  <body>
+    <div class="container" width="100%">
+      <div class="jumbotron" id="jumbo">
+        <h2>Lab 2 CS 437</h2>
+        <h5>Kerui, Drew, Niketh, Manit</h5>
+
+        <!-- <video class="center" width="600" height="400" controls>
+        <source src="samplevid.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video> -->
+        <img src="./media/Cars.jpg" width="100%" id="pics" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="container">
+        <div class="jumbotron text-center col-md-6" id="jumbo">
+          
+          <h2 style="text-align: left;">Movement:</h2>
+          <span>&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;</span>
+          &nbsp; &nbsp;
+          <div>
+            <input id="message" type="text" placeholder="message to Pi" />
+            <button class="btn btn-success" style="background-color: aqua; color: black;" onclick="update_data()">
+              Submit
+            </button>
+            &nbsp;
+          </div>
+          <div>
+          <span id="upArrow" style="font-size: 50px; color: aqua;"
+            >&#8679;</span
+          >
+        </div>
+          <br />
+          <span id="leftArrow" style="font-size: 45px; color: aqua"
+            >&#8678;</span
+          >
+          <span
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >
+          <span id="rightArrow" style="font-size: 45px; color: aqua"
+            >&#8680;</span
+          >
+          <br />
+          <span>&nbsp;&nbsp;</span>
+          <span id="downArrow" style="font-size: 50px; color: aqua"
+            >&#8681;</span
+          >
+          
+        </div>
+        
+
+        <div class="jumbotron text-left col-md-6" id="jumbo">
+          <h2 style="text-align: left;">Car Info:</h2> 
+          
+          <div id="info">
+            <div id="info-section">
+            Car Direction: <span id="direction">{}</span>
+          </div>
+            
+          <div id="info-section">
+            Battery %: <span id="battery">{}</span>
+          </div>
+          <div id="info-section">
+            Speed: <span id="speed">{}</span>
+          </div>
+          <div id="info-section">
+            Distance Traveled: <span id="distance">{}</span>
+          </div>
+          <div id="info-section">
+            Temperature of the Pi: <span id="temperature">{}</span>
+          </div>
+          <div id="info-section">
+            Bluetooth return value: <span id="bluetooth">{}</span>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
